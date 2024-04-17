@@ -10,14 +10,15 @@
 </head>
 
 <body>
-  <form action="javascript:" id="add-timer">
-    <input type="text" name="name">
-    <button>+</button>
-  </form>
+  <div class="container">
+    <form action="javascript:" id="add-timer" class="add-task">
+      <input type="text" name="name" class="add-task__input" placeholder="What do you need to track?">
+      <button class="add-task__btn" type="submit">ADD</button>
+    </form>
 
-  <ul class="timers">
-  </ul>
-
+    <ul class="timers">
+    </ul>
+  </div>
 </body>
 
 </html>

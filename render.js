@@ -19,10 +19,11 @@ function addTimerItem(timer) {
 
 function createTimerItem(timer) {
   const item = document.createElement('li');
+  item.classList.add("timers__item");
 
   item.innerHTML = `
-    <span>${timer.name}</span>
-    <span>${formatTime(Math.floor(timer.ms / 1000))}</span>
+    <span class="timers__item-time">${formatTime(Math.floor(timer.ms / 1000))}</span>
+    <span class="timers__item-task">${timer.name}</span>
     <button>${timer.isRunning ? 'Pause' : timer.ms ? 'Resume' : 'Start'}</button>
     <button>X</button>
     <button>Edit</button>

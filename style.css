@@ -2,6 +2,93 @@ ul {
   list-style: none;
 }
 
-li{
+li {
   margin-bottom: 12px;
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0px solid;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: #969696;
+}
+
+.container {
+  padding: 16px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  color: #323232;
+}
+
+.add-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 78px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.add-task__input {
+  height: 100%;
+  width: 100%;
+  background-color: #F1ECE6;
+
+  padding: 16px 30px;
+}
+
+.add-task__btn {
+  background-color: #76B7CD;
+  color: #F3F3F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 140px;
+  height: 100%;
+}
+
+.timers {
+  background-color: #F1ECE6;
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.timers__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #76B7CD;
+}
+
+.timers__item-time {
+  max-width: 70px;
+  width: 100%;
+}
+
+.timers__item-task{
+  width: 100%;
+}
+
+.timers__item-btns {
+  max-width: 140px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
 }
