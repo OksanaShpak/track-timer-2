@@ -15,7 +15,7 @@ function handleAdd() {
 function handleTimerClick(event) {
   if (!event.target.matches('button')) return;
 
-  const id = event.target.parentElement.dataset.id;
+  const id = event.target.closest('li').dataset.id;
   const action = event.target.textContent;
 
   if (action === 'Start' || action === 'Resume') {

@@ -24,9 +24,11 @@ function createTimerItem(timer) {
   item.innerHTML = `
     <span class="timers__item-time">${formatTime(Math.floor(timer.ms / 1000))}</span>
     <span class="timers__item-task">${timer.name}</span>
-    <button>${timer.isRunning ? 'Pause' : timer.ms ? 'Resume' : 'Start'}</button>
-    <button>X</button>
-    <button>Edit</button>
+    <div>
+      <button>${timer.isRunning ? 'Pause' : timer.ms ? 'Resume' : 'Start'}</button>
+      <button>X</button>
+      <button>Edit</button>
+    </div>
   `;
 
   item.dataset.id = timer.id;
@@ -36,7 +38,7 @@ function createTimerItem(timer) {
 
 function updateTimerItem(timer) {
   const item = getTimerItem(timer.id);
-  const [name, seconds, button] = item.children;
+  const [seconds, name, { children: [button] }] = item.children;
 
   name.textContent = timer.name;
   seconds.textContent = formatTime(Math.floor(timer.ms / 1000));

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 ul {
   list-style: none;
 }
@@ -80,7 +84,7 @@ input::placeholder {
   width: 100%;
 }
 
-.timers__item-task{
+.timers__item-task {
   width: 100%;
 }
 
